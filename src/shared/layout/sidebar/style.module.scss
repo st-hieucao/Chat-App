@@ -1,0 +1,15 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18rem;
+  height: 100vh;
+  overflow: scroll;
+  border-right: 1px solid #ddd;
+  .content {
+    padding: 1rem;
+  }
+  .users {
+    margin-top: 2rem;
+  }
+}

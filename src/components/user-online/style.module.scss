@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  .userName {
+    color: #050505;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+  }
+  
+}
