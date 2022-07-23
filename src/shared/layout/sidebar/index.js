@@ -7,27 +7,11 @@ import style from './style.module.scss';
 const Sidebar = () => {
   const dispatch = useDispatch();
   const [users, setUsers] = useState([]);
-  // const users = [
-  //   {
-  //     id: 1,
-  //     name: 'Cao Kha Hieu'
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'Nguyen Hoang Thinh'
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Cao Huu Tri'
-  //   },
-  //   {
-  //     id: 4,
-  //     name: 'Nguyen Hoang Sang'
-  //   }
-  // ];
+  console.log(users)
 
   useEffect(() => {
     dispatch(getUser(null, (data) => {
+      console.log(data)
       setUsers(data)
     }))
   }, [])

@@ -14,9 +14,9 @@ const Register = () => {
   const {user, handleSaveUser } = useContext(userContext);
 
   const onSubmit = (data) => {
-    dispatch(signup(data, () => {
-      localStorage.setItem('USER', JSON.stringify(data));
-      handleSaveUser(data)
+    dispatch(signup(data, (res) => {
+      localStorage.setItem('USER', JSON.stringify(res));
+      handleSaveUser(res)
       history.push('/');
     }))
   };
