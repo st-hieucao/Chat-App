@@ -29,10 +29,10 @@ const CallVideo = () => {
   }, [call.stream]);
 
   useEffect(() => {
-    if (call.stream) {
+    if (id && call.stream) {
       handleClickCallUser();
     }
-  }, [call.stream]);
+  }, [id, call.stream]);
 
   function handleClickCallUser() {
     const peer = new Peer({
