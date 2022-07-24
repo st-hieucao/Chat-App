@@ -7,7 +7,6 @@ import style from './style.module.scss';
 const Sidebar = () => {
   const dispatch = useDispatch();
   const [users, setUsers] = useState([]);
-  console.log(users)
 
   useEffect(() => {
     dispatch(getUser(null, (data) => {
@@ -22,7 +21,7 @@ const Sidebar = () => {
         <h3 className={style.title}>Người liên hệ</h3>
         <div className={style.users}>
         {
-          users.map((user) => (<UserOnline key={user.id} name={user.name} />))
+          users.map((user) => (<UserOnline key={user._id} name={user.name} />))
         }
         </div>
       </div>
